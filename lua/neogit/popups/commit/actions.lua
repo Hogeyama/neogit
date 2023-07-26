@@ -89,7 +89,7 @@ function M.instant_fixup(popup)
     return
   end
 
-  git.rebase.rebase_interactive(commit .. "~1", "--autosquash")
+  git.rebase.rebase_interactive(commit .. "~1", { "--autosquash" })
 end
 
 function M.instant_squash(popup)
@@ -98,7 +98,7 @@ function M.instant_squash(popup)
     return
   end
 
-  git.rebase.rebase_interactive(commit .. "~1", "--autosquash")
+  git.rebase.rebase_interactive(commit .. "~1", { "--autosquash" })
 end
 
 return M
